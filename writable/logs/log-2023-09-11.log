@@ -1,0 +1,131 @@
+CRITICAL - 2023-09-11 05:39:37 --> "require" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 317.
+ 1 SYSTEMPATH\Validation\Validation.php(317): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('require')
+ 2 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'Test1gmail.com', [...], [...])
+ 3 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Register.php(25): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+CRITICAL - 2023-09-11 05:40:24 --> "min_lenght" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 317.
+ 1 SYSTEMPATH\Validation\Validation.php(317): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('min_lenght')
+ 2 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345', [...], [...])
+ 3 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Register.php(25): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+ERROR - 2023-09-11 05:41:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4_jwt', 3306, '', 0)
+#1 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('Test1@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'Test1@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\project-pkl\app\Controllers\Register.php(25): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Register->index()
+#10 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#11 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\project-pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('Test1@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'Test1@gmail.com', Array, Array)
+#6 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\project-pkl\app\Controllers\Register.php(25): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Register->index()
+#9 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#10 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\project-pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-09-11 05:41:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('Test1@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'Test1@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Register.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Register->index()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+CRITICAL - 2023-09-11 06:56:12 --> Class "Config\App\Filters\Auth" not found
+in SYSTEMPATH\Filters\Filters.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('Home', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+CRITICAL - 2023-09-11 06:56:37 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Filters\Auth.php on line 70.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\project-pkl\\app\\Filters\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\Auth')
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('Home', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+CRITICAL - 2023-09-11 06:56:50 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Filters\Auth.php on line 70.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\project-pkl\\app\\Filters\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\Auth')
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('Home', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+CRITICAL - 2023-09-11 06:59:25 --> Unmatched '}'
+in APPPATH\Filters\Auth.php on line 57.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\project-pkl\\app\\Filters\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\Auth')
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('Home', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+CRITICAL - 2023-09-11 07:00:01 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Filters\Auth.php on line 72.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\project-pkl\\app\\Filters\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\Auth')
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('Home', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+CRITICAL - 2023-09-11 07:01:58 --> App\Controllers\User::index(): Return value must be of type string, CodeIgniter\HTTP\Response returned
+in APPPATH\Controllers\User.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+CRITICAL - 2023-09-11 07:19:33 --> Undefined variable $e
+in APPPATH\Filters\Auth.php on line 50.
+ 1 APPPATH\Filters\Auth.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $e', 'C:\\xampp\\htdocs\\project-pkl\\app\\Filters\\Auth.php', 50)
+ 2 SYSTEMPATH\Filters\Filters.php(180): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('Home', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')
