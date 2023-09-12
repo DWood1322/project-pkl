@@ -8,4 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->post('register', 'Register::index');
 $routes->post('login', 'Login::index');
-$routes->get('Home', 'User::index',['filter'=>'auth']);
+$routes->get('home', 'User::index',['filter'=>'auth']);
