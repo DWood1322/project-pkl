@@ -4,11 +4,11 @@ namespace App\Controllers\Main;
 
 use App\Controllers\BaseController;
 
-class Home extends BaseController
+class Dashboard extends BaseController
 {
     public function index()
     {
-        return view('Main/home');
+        return view('Main/dashboard');
     }
 
     public function docs()
@@ -16,10 +16,10 @@ class Home extends BaseController
         return view('Main/docs');
     }
 
-    public function about()
-    {
-        return view('Main/about');
-    }
+    // public function about()
+    // {
+    //     return view('Main/about');
+    // }
 
     public function signin()
     {

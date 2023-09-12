@@ -20,7 +20,7 @@
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-2 col-lg-1">
                     <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
-                        <i class="fas fa-arrow-left fa-5x"></i>
+                    <a href="/"><i class="fas fa-arrow-left fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="col-md-10 col-lg-11">
