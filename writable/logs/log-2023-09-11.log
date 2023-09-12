@@ -129,3 +129,11 @@ in APPPATH\Filters\Auth.php on line 50.
  4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+CRITICAL - 2023-09-11 08:41:07 --> Undefined variable $e
+in APPPATH\Filters\Auth.php on line 50.
+ 1 APPPATH\Filters\Auth.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $e', 'C:\\xampp\\htdocs\\project-pkl\\app\\Filters\\Auth.php', 50)
+ 2 SYSTEMPATH\Filters\Filters.php(180): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('Home', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\project-pkl\\public\\index.php')

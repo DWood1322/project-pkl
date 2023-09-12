@@ -47,7 +47,7 @@ class Auth implements FilterInterface
             $response =service('response');
             $response->setJSON([
                 'status'=>false,
-                'massage'=>'Token Invalid' . $e->getMassage()
+                'massage'=>'Token Invalid' 
             ]);
             return $response->setStatusCode(ResponseInterface::HTTP_UNAUTHORIZED);
 
