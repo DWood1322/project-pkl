@@ -18,7 +18,7 @@
   <section class="vh-100" style="background-color: #eee;">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-md-2 col-lg-1">
+        <div class="col-md-2 col-lg-1">
           <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
             <a href="/"><i class="fas fa-arrow-left fa-5x"></i></a>
           </div>
@@ -59,12 +59,15 @@
 
                     <div class="form-check d-flex justify-content-center mb-4">
                       <label class="form-check-label" for="form2Example3">
-                        Dont Have An Account? <a href="sign-up">Sign-Up</a>
+                        Dont Have An Account? <a href="sign-up">Register</a>
                       </label>
                     </div>
 
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <button type="submit" class="btn btn-primary btn-lg">Login</button>
+
+                      <a href="/home-tes">
+                        <button type="button" class="btn btn-primary btn-lg">Login</button>
+                      </a>
                     </div>
 
 </div>

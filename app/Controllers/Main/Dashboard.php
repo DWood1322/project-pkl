@@ -124,4 +124,9 @@ class Dashboard extends BaseController
         return view('welcome_message');
     }
 
+    public function home()
+    {
+        return view('Main/home');
+    }
+
 }

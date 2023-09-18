@@ -76,12 +76,14 @@
 
                                         <div class="form-check d-flex justify-content-center mb-4">
                                             <label class="form-check-label" for="form2Example3">
-                                                Sudah Punya akun? <a href="/sign-in">Login</a>
+                                                Already Have An Account? <a href="/sign-in">Login</a>
                                             </label>
                                         </div>
 
                                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                                            <a href="/home-tes">
+                                                <button type="button" class="btn btn-primary btn-lg">Register</button>
+                                            </a>
                                         </div>
 
                                     </div>
