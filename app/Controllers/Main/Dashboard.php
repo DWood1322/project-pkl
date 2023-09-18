@@ -69,7 +69,7 @@ class Dashboard extends BaseController
         //     'email'=>$email
         // ];
         // $token = JWT::encode($payload, $key, "HS256");
-        return redirect()->to('home');
+        return redirect()->to('/home-tes');
     } else {
         // Jika halaman diakses secara langsung, tampilkan tampilan login
         return view('Main/signin');
@@ -118,7 +118,8 @@ class Dashboard extends BaseController
             return $this->respond($response,422);
         }
     }
-    public function home()
+
+    public function main()
     {
 
         return view('welcome_message');
