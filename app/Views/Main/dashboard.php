@@ -84,8 +84,8 @@
                                 sed do eiusmod magna aliqua. Ut enim ad minim veniam
                             </p>
                             <div class="btn-box">
-                                <a href="/sign-in" class="btn-1"> Join Us </a>
-                                <a href="/sign-up" class="btn-2">Already Join?</a>
+                                <a href="/sign-up" class="btn-1"> Join Us </a>
+                                <a href="/sign-in" class="btn-2">Already Join?</a>
                             </div>
                         </div>
                     </div>
