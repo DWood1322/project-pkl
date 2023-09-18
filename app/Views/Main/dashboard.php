@@ -75,6 +75,7 @@
                     </nav>
                 </div>
             </div>
+
             <!-- end header navbar section -->
 
             <!-- content -->
