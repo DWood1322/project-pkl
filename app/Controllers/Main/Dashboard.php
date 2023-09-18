@@ -31,4 +31,9 @@ class Dashboard extends BaseController
         return view('Main/signup');
     }
 
+    public function home()
+    {
+        return view('Main/home');
+    }
+
 }

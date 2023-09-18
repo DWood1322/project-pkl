@@ -35,6 +35,7 @@ $routes->get('/docs', 'Main\Dashboard::docs');
 $routes->get('/about', 'Main\Dashboard::about');
 $routes->get('/sign-in', 'Main\Dashboard::signin');
 $routes->get('/sign-up', 'Main\Dashboard::signup');
+$routes->get('/home-tes', 'Main\Dashboard::home');
 
 
 
