@@ -20,7 +20,7 @@
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-2 col-lg-1">
                     <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
-                    <a href="/"><i class="fas fa-arrow-left fa-5x"></i></a>
+                        <a href="/"><i class="fas fa-arrow-left fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="col-md-10 col-lg-11">
@@ -31,13 +31,14 @@
 
                                     <p class="h1 fw-bold mx-1 mx-md-4 mt-4">Sign Up</p>
                                     <p class="mb-4 mx-1 mx-md-4"><b>Let's Get Started!</b> Please Fill This Form Down Belllow To Create Your Account</p>
-                                    <form class="mx-1 mx-md-4">
+                                    <?php echo form_open('/sign-up'); ?>
+                                    <div class="mx-1 mx-md-4">
 
                                         <div class="d-flex flex-row align-items-center mb-4">
 
                                             <div class="form-outline flex-fill mb-0 align-items-center">
                                                 <div class="form-floating mb-2">
-                                                    <input type="email" class="form-control" id="floatingInput" placeholder="">
+                                                    <input type="text" class="form-control" id="floatingInput" placeholder="" name="username" id="email">
                                                     <label for="floatingInput">Username</label>
                                                 </div>
                                             </div>
@@ -47,7 +48,7 @@
 
                                             <div class="form-outline flex-fill mb-0 align-items-center">
                                                 <div class="form-floating mb-2">
-                                                    <input type="email" class="form-control" id="floatingInput" placeholder="">
+                                                    <input type="email" class="form-control" id="floatingInput" placeholder="" name="email" id="email">
                                                     <label for="floatingInput">Email address</label>
                                                 </div>
                                             </div>
@@ -57,7 +58,7 @@
 
                                             <div class="form-outline flex-fill mb-0 align-items-center">
                                                 <div class="form-floating mb-2">
-                                                    <input type="email" class="form-control" id="floatingInput" placeholder="">
+                                                    <input type="password" class="form-control" id="floatingInput" placeholder="" name="password" id="email">
                                                     <label for="floatingInput">Password</label>
                                                 </div>
                                             </div>
@@ -67,7 +68,7 @@
 
                                             <div class="form-outline flex-fill mb-0 align-items-center">
                                                 <div class="form-floating mb-2">
-                                                    <input type="email" class="form-control" id="floatingInput" placeholder="">
+                                                    <input type="password" class="form-control" id="floatingInput" placeholder="" name="confirm_password" id="email">
                                                     <label for="floatingInput">Confirm Password</label>
                                                 </div>
                                             </div>
@@ -80,12 +81,13 @@
                                         </div>
 
                                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <a href="/home-tes">
-                                                <button type="button" class="btn btn-primary btn-lg">Register</button>
-                                            </a>
+                                            
+                                                <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                                            
                                         </div>
 
-                                    </form>
+                                    </div>
+                                    <?php echo form_close(); ?>
 
                                 </div>
                                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">

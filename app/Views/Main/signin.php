@@ -31,15 +31,16 @@
 
                   <p class="h1 fw-bold mx-1 mx-md-4 mt-4">Sign In</p>
                   <p class="mb-4 mx-1 mx-md-4"><b>Welcome Back!</b> Please Fill Your Email And Password Down Belllow</p>
-
-                  <form class="mx-1 mx-md-4">
+                  
+                  <?php echo form_open('/sign-in'); ?>
+                  <div class="mx-1 mx-md-4">
 
                     <div class="d-flex flex-row align-items-center mb-4">
 
                       <div class="form-outline flex-fill mb-0 align-items-center">
                         <div class="form-floating mb-2">
-                          <input type="email" class="form-control" id="floatingInput" placeholder="">
-                          <label for="floatingInput">Email address</label>
+                          <input type="text" class="form-control" id="floatingInput" placeholder name="username">
+                          <label for="floatingInput">Username</label>
                         </div>
                       </div>
                     </div>
@@ -48,7 +49,7 @@
 
                       <div class="form-outline flex-fill mb-0 align-items-center">
                         <div class="form-floating mb-2">
-                          <input type="email" class="form-control" id="floatingInput" placeholder="">
+                          <input type="password" class="form-control" id="floatingInput" placeholder="" name="password">
                           <label for="floatingInput">Password</label>
                         </div>
                       </div>
@@ -63,12 +64,15 @@
                     </div>
 
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <a href="/home-tes">
-                        <button type="button" class="btn btn-primary btn-lg">Login</button>
-                      </a>
+
+                      
+                        <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                      
                     </div>
 
-                  </form>
+</div>
+<?php echo form_close(); ?>
+                 
 
                 </div>
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
