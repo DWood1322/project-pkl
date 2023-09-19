@@ -31,48 +31,53 @@
 
                   <p class="h1 fw-bold mx-1 mx-md-4 mt-4">Sign In</p>
                   <p class="mb-4 mx-1 mx-md-4"><b>Welcome Back!</b> Please Fill Your Email And Password Down Belllow</p>
-                  
-                  <?php echo form_open('/sign-in'); ?>
-                  <div class="mx-1 mx-md-4">
+                  <?php if (isset($alert)): ?>
+        <div class="alert alert-<?= $alert['status'] ?>" role="alert">
+            <?= $alert['message'] ?>
+        </div>
+    <?php endif; ?>
+                  <form action="" method="post">
 
-                    <div class="d-flex flex-row align-items-center mb-4">
+                    <div class="mx-1 mx-md-4">
 
-                      <div class="form-outline flex-fill mb-0 align-items-center">
-                        <div class="form-floating mb-2">
-                          <input type="text" class="form-control" id="floatingInput" placeholder name="username">
-                          <label for="floatingInput">Username</label>
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <?= form_open('form') ?>
+                        <div class="form-outline flex-fill mb-0 align-items-center">
+                          <div class="form-floating mb-2">
+                            <input type="text" class="form-control" id="floatingInput" placeholder name="username">
+                            <label for="floatingInput">Username</label>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div class="d-flex flex-row align-items-center mb-4">
+                      <div class="d-flex flex-row align-items-center mb-4">
 
-                      <div class="form-outline flex-fill mb-0 align-items-center">
-                        <div class="form-floating mb-2">
-                          <input type="password" class="form-control" id="floatingInput" placeholder="" name="password">
-                          <label for="floatingInput">Password</label>
+                        <div class="form-outline flex-fill mb-0 align-items-center">
+                          <div class="form-floating mb-2">
+                            <input type="password" class="form-control" id="floatingInput" placeholder="" name="password">
+                            <label for="floatingInput">Password</label>
+                          </div>
                         </div>
                       </div>
+
+
+
+                      <div class="form-check d-flex justify-content-center mb-4">
+                        <label class="form-check-label" for="form2Example3">
+                          Dont Have An Account? <a href="sign-up">Register</a>
+                        </label>
+                      </div>
+
+                      <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+
+
+                        <button type="submit" name="login" class="btn btn-primary btn-lg">Login</button>
+
+                      </div>
+
                     </div>
+                    <?= form_close() ?>
 
-
-
-                    <div class="form-check d-flex justify-content-center mb-4">
-                      <label class="form-check-label" for="form2Example3">
-                        Dont Have An Account? <a href="sign-up">Register</a>
-                      </label>
-                    </div>
-
-                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-
-                      
-                        <button type="submit" class="btn btn-primary btn-lg">Login</button>
-                      
-                    </div>
-
-</div>
-<?php echo form_close(); ?>
-                 
 
                 </div>
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
