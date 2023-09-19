@@ -106,3 +106,170 @@ INFO - 2023-09-18 02:11:41 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-09-18 02:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-09-18 02:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-09-18 02:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 02:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 02:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 02:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 02:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 02:46:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 02:46:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-18 02:46:31 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ci4_jwt' in D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4_jwt', 3306, '', 0)
+#1 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('iwak123@gmail.c...', 'email', Array, NULL, 'email')
+#6 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'iwak123@gmail.c...', Array, Array)
+#7 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 D:\xampp\htdocs\project-pkl\app\Controllers\Main\Dashboard.php(102): CodeIgniter\Controller->validate(Array)
+#9 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Main\Dashboard->signup()
+#10 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main\Dashboard))
+#11 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\project-pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ci4_jwt' in D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('iwak123@gmail.c...', 'email', Array, NULL, 'email')
+#5 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'iwak123@gmail.c...', Array, Array)
+#6 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 D:\xampp\htdocs\project-pkl\app\Controllers\Main\Dashboard.php(102): CodeIgniter\Controller->validate(Array)
+#8 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Main\Dashboard->signup()
+#9 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main\Dashboard))
+#10 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\project-pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-09-18 02:46:31 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4_jwt'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('iwak123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'iwak123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Main\Dashboard.php(102): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Main\Dashboard->signup()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+INFO - 2023-09-18 02:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 02:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-18 02:46:54 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ci4_jwt' in D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4_jwt', 3306, '', 0)
+#1 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('iwak123@gmail.c...', 'email', Array, NULL, 'email')
+#6 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'iwak123@gmail.c...', Array, Array)
+#7 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 D:\xampp\htdocs\project-pkl\app\Controllers\Main\Dashboard.php(102): CodeIgniter\Controller->validate(Array)
+#9 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Main\Dashboard->signup()
+#10 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main\Dashboard))
+#11 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\project-pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ci4_jwt' in D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('iwak123@gmail.c...', 'email', Array, NULL, 'email')
+#5 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'iwak123@gmail.c...', Array, Array)
+#6 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#7 D:\xampp\htdocs\project-pkl\app\Controllers\Main\Dashboard.php(102): CodeIgniter\Controller->validate(Array)
+#8 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(919): App\Controllers\Main\Dashboard->signup()
+#9 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main\Dashboard))
+#10 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\project-pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\project-pkl\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-09-18 02:46:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4_jwt'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('iwak123@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'iwak123@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Main\Dashboard.php(102): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Main\Dashboard->signup()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\project-pkl\\public\\index.php')
+INFO - 2023-09-18 02:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 04:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 06:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 06:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 06:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 06:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 06:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 07:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 08:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 08:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 08:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 08:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 08:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 08:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 08:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 08:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 08:07:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-18 08:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

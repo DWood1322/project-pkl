@@ -85,7 +85,7 @@
                         <div class="col-md-7">
                             <div class="detail-box">
                                 <h1>
-                                    WELLCOME TO ARK BOOK!
+                                    WELCOME TO ARK BOOK!
                                     <span>
                                         Our New Product
                                     </span>
