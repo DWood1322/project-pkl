@@ -31,11 +31,11 @@
 
                   <p class="h1 fw-bold mx-1 mx-md-4 mt-4">Sign In</p>
                   <p class="mb-4 mx-1 mx-md-4"><b>Welcome Back!</b> Please Fill Your Email And Password Down Belllow</p>
-                  <?php if (isset($alert)): ?>
-        <div class="alert alert-<?= $alert['status'] ?>" role="alert">
-            <?= $alert['message'] ?>
-        </div>
-    <?php endif; ?>
+                  <?php if (isset($alert)) : ?>
+                    <div class="alert alert-<?= $alert['status'] ?>" role="alert">
+                      <?= $alert['message'] ?>
+                    </div>
+                  <?php endif; ?>
                   <form action="" method="post">
 
                     <div class="mx-1 mx-md-4">
