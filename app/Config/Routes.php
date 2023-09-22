@@ -38,6 +38,7 @@ $routes->post('/sign-in', 'Main\Dashboard::signin');
 $routes->get('/sign-up', 'Main\Dashboard::signup');
 $routes->post('/sign-up', 'Main\Dashboard::signup');
 $routes->get('/home', 'Main\Dashboard::main');
+$routes->get('/home/page', 'Main\Dashboard::page');
 $routes->post('/logout', 'Main\Dashboard::logout');
 $routes->get('/home-tes', 'Main\Dashboard::home');
 
