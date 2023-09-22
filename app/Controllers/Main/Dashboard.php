@@ -64,7 +64,7 @@ class Dashboard extends BaseController
             // Create a session variable upon successful sign-in
             $session = session();
             $session->set('sesusername', $username);
-
+            
             return redirect()->to('/home');
         }
     }
@@ -131,12 +131,28 @@ public function logout()
 
     public function main()
     {
+        // Check if 'sesusername' session variable exists
+    $session = session();
+    if (!$session->has('sesusername')) {
+        // 'sesusername' session variable doesn't exist, show Access Denied message
+        return view('Main/access_denied');
+    }
 
-        return view('welcome_message');
+    // 'sesusername' session variable exists, load the home page
+        $header['title']='Dashboard';
+        // echo view('partial/header',$header);
+        // echo view('partial/top_menu');
+        // echo view('partial/side_menu');
+        echo view('Main/admin',$header);
+        // echo view('partial/footer');
     }
 
     public function home()
     {
         return view('Main/home');
+    }
+    public function page()
+    {
+        return view('Main/main');
     }
 }
