@@ -30,62 +30,62 @@ class Dashboard extends BaseController
     // {
     //     return view('Main/about');
     // }
-     // $this->session->set($datasession);
-        // $key = getenv("JWT_SECRET");
-        // $iat =time();
-        // $exp = $iat + (60*60);
+    // $this->session->set($datasession);
+    // $key = getenv("JWT_SECRET");
+    // $iat =time();
+    // $exp = $iat + (60*60);
 
-        // $payload =[
-        //     'iss'=>'ci4_jwt',
-        //     'sub'=>'tokenlogin',
-        //     'iat'=>$iat,
-        //     'exp'=>$exp,
-        //     'email'=>$email
-        // ];
-        // $token = JWT::encode($payload, $key, "HS256");
+    // $payload =[
+    //     'iss'=>'ci4_jwt',
+    //     'sub'=>'tokenlogin',
+    //     'iat'=>$iat,
+    //     'exp'=>$exp,
+    //     'email'=>$email
+    // ];
+    // $token = JWT::encode($payload, $key, "HS256");
 
     public function signin()
-{
-    helper(['form']);
-    $data = []; // Initialize an empty array to hold data for the view
-    
-    if ($this->request->getMethod() === 'post') {
-        $username = $this->request->getVar('username');
-        $password = $this->request->getVar('password');
+    {
+        helper(['form']);
+        $data = []; // Initialize an empty array to hold data for the view
 
-        $userModel = new UserModel();
-        $user = $userModel->where('username', $username)->first();
+        if ($this->request->getMethod() === 'post') {
+            $username = $this->request->getVar('username');
+            $password = $this->request->getVar('password');
 
-        if (!$user) {
-            $data['alert'] = ['status' => 'danger', 'message' => 'Username kosong'];
-        } elseif (!password_verify($password, $user['password'])) {
-            $data['alert'] = ['status' => 'danger', 'message' => 'Password salah'];
-        } else {
-            // Create a session variable upon successful sign-in
-            $session = session();
-            $session->set('sesusername', $username);
-            
-            return redirect()->to('/home');
+            $userModel = new UserModel();
+            $user = $userModel->where('username', $username)->first();
+
+            if (!$user) {
+                $data['alert'] = ['status' => 'danger', 'message' => 'Username kosong'];
+            } elseif (!password_verify($password, $user['password'])) {
+                $data['alert'] = ['status' => 'danger', 'message' => 'Password salah'];
+            } else {
+                // Create a session variable upon successful sign-in
+                $session = session();
+                $session->set('sesusername', $username);
+
+                return redirect()->to('/home');
+            }
         }
+
+        // Pass the data array to the view
+        return view('Main/signin', $data);
     }
 
-    // Pass the data array to the view
-    return view('Main/signin', $data);
-}
+    public function logout()
+    {
+        // Load the session library if not already loaded
+        $session = session();
 
-public function logout()
-{
-    // Load the session library if not already loaded
-    $session = session();
+        // Unset or destroy session variables related to authentication
+        $session->remove('sesusername'); // Unset a specific session variable
+        // Alternatively, you can destroy the entire session
+        $session->destroy();
 
-    // Unset or destroy session variables related to authentication
-    $session->remove('sesusername'); // Unset a specific session variable
-    // Alternatively, you can destroy the entire session
-    $session->destroy();
-
-    // Redirect to the sign-in page or any other page as needed
-    return redirect()->to('/sign-in'); // Change '/signin' to your actual login page URL
-}
+        // Redirect to the sign-in page or any other page as needed
+        return redirect()->to('/sign-in'); // Change '/signin' to your actual login page URL
+    }
 
 
     public function signup()
@@ -129,30 +129,26 @@ public function logout()
         }
     }
 
-    public function main()
+    public function home()
     {
         // Check if 'sesusername' session variable exists
-    $session = session();
-    if (!$session->has('sesusername')) {
-        // 'sesusername' session variable doesn't exist, show Access Denied message
-        return view('Main/access_denied');
-    }
+        $session = session();
+        if (!$session->has('sesusername')) {
+            // 'sesusername' session variable doesn't exist, show Access Denied message
+            return view('Main/access_denied');
+        }
 
-    // 'sesusername' session variable exists, load the home page
-        $header['title']='Dashboard';
+        // 'sesusername' session variable exists, load the home page
+        $header['title'] = 'Dashboard';
         // echo view('partial/header',$header);
         // echo view('partial/top_menu');
         // echo view('partial/side_menu');
-        echo view('Main/admin',$header);
+        echo view('Main/home', $header);
         // echo view('partial/footer');
     }
 
-    public function home()
-    {
-        return view('Main/home');
-    }
     public function page()
     {
-        return view('Main/main');
+        return view('Main/page');
     }
 }
