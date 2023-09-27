@@ -15,7 +15,7 @@
 
 <body>
     <!-- REGIST -->
-    <section class="vh-100" style="background-color: #eee;">
+    <section style="background-color: #eee;">
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-2 col-lg-1">
@@ -31,6 +31,12 @@
 
                                     <p class="h1 fw-bold mx-1 mx-md-4 mt-4">Sign Up</p>
                                     <p class="mb-4 mx-1 mx-md-4"><b>Let's Get Started!</b> Please Fill This Form Down Belllow To Create Your Account</p>
+                                    <?php if (isset($validation)) : ?>
+                                        <div class="alert alert-danger">
+                                            <?php echo \Config\Services::validation()->listErrors(); ?>
+                                        </div>
+                                    <?php endif; ?>
+
                                     <?php echo form_open('/sign-up'); ?>
                                     <div class="mx-1 mx-md-4">
 
@@ -38,8 +44,8 @@
 
                                             <div class="form-outline flex-fill mb-0 align-items-center">
                                                 <div class="form-floating mb-2">
-                                                    <input type="text" class="form-control" id="floatingInput" placeholder="" name="username" id="email">
-                                                    <label for="floatingInput">Username</label>
+                                                <input type="text" class="form-control" name="username" id="email" value="<?= set_value('username', session()->getFlashdata('oldInput.username')) ?>">
+                                                    <label>Username</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -48,8 +54,8 @@
 
                                             <div class="form-outline flex-fill mb-0 align-items-center">
                                                 <div class="form-floating mb-2">
-                                                    <input type="email" class="form-control" id="floatingInput" placeholder="" name="email" id="email">
-                                                    <label for="floatingInput">Email address</label>
+                                                <input type="email" class="form-control"  name="email" id="email" value="<?= set_value('email', session()->getFlashdata('oldInput.email')) ?>">
+                                                    <label >Email address</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -58,8 +64,8 @@
 
                                             <div class="form-outline flex-fill mb-0 align-items-center">
                                                 <div class="form-floating mb-2">
-                                                    <input type="password" class="form-control" id="floatingInput" placeholder="" name="password" id="email">
-                                                    <label for="floatingInput">Password</label>
+                                                    <input type="password" class="form-control"  name="password" id="email">
+                                                    <label>Password</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -68,8 +74,8 @@
 
                                             <div class="form-outline flex-fill mb-0 align-items-center">
                                                 <div class="form-floating mb-2">
-                                                    <input type="password" class="form-control" id="floatingInput" placeholder="" name="confirm_password" id="email">
-                                                    <label for="floatingInput">Confirm Password</label>
+                                                    <input type="password" class="form-control" name="confirm_password" id="email">
+                                                    <label >Confirm Password</label>
                                                 </div>
                                             </div>
                                         </div>

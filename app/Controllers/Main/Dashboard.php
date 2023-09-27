@@ -45,21 +45,25 @@ class Dashboard extends BaseController
     // $token = JWT::encode($payload, $key, "HS256");
 
     public function signin()
-    {
-        helper(['form']);
-        $data = []; // Initialize an empty array to hold data for the view
+{
+    helper(['form']);
+    $data = []; // Initialize an empty array to hold data for the view
 
-        if ($this->request->getMethod() === 'post') {
-            $username = $this->request->getVar('username');
-            $password = $this->request->getVar('password');
+    if ($this->request->getMethod() === 'post') {
+        $username = $this->request->getVar('username');
+        $password = $this->request->getVar('password');
 
+        // Validasi apakah username dan password tidak kosong
+        if (empty($username) || empty($password)) {
+            $data['alert'] = ['status' => 'danger', 'message' => 'Username dan password harus diisi.'];
+        } else {
             $userModel = new UserModel();
             $user = $userModel->where('username', $username)->first();
 
             if (!$user) {
-                $data['alert'] = ['status' => 'danger', 'message' => 'Username kosong'];
+                $data['alert'] = ['status' => 'danger', 'message' => 'Username atau password salah.'];
             } elseif (!password_verify($password, $user['password'])) {
-                $data['alert'] = ['status' => 'danger', 'message' => 'Password salah'];
+                $data['alert'] = ['status' => 'danger', 'message' => 'Username atau password salah.'];
             } else {
                 // Create a session variable upon successful sign-in
                 $session = session();
@@ -68,10 +72,12 @@ class Dashboard extends BaseController
                 return redirect()->to('/home');
             }
         }
-
-        // Pass the data array to the view
-        return view('Main/signin', $data);
     }
+
+    // Pass the data array to the view
+    return view('Main/signin', $data);
+}
+
 
     public function logout()
     {
@@ -89,45 +95,66 @@ class Dashboard extends BaseController
 
 
     public function signup()
-    {
-        helper(['form']);
+{
+    helper(['form']);
 
-        // Jika metode yang digunakan adalah GET, tampilkan halaman registrasi
-        if ($this->request->getMethod() === 'get') {
-            return view('Main/signup');
-        }
-        $rules = [
-            'email' => [
-                'rules' => 'required|valid_email|is_unique[users.email]'
-            ],
-            'username' => [
-                'rules' => 'required|is_unique[users.username]'
-            ],
-            'password' => [
-                'rules' => 'required|min_length[6]'
-            ],
-            'confirm_password' => [
-                'rules' => 'required|matches[password]'
-            ],
-        ];
-        if ($this->validate($rules)) {
-            $userModel = new UserModel();
-
-            $userData = [
-                'username' => $this->request->getVar('username'),
-                'email' => $this->request->getVar('email'),
-                'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
-            ];
-            $userModel->save($userData);
-            return redirect()->to('/sign-in')->with('success', 'Pendaftaran berhasil. Silakan login.');
-        } else {
-            $response = [
-                'status' => false,
-                'errors' => $this->validator->getErrors()
-            ];
-            return $this->respond($response, 422);
-        }
+    // Jika metode yang digunakan adalah GET, tampilkan halaman registrasi
+    if ($this->request->getMethod() === 'get') {
+        return view('Main/signup');
     }
+
+    $rules = [
+        'email' => [
+            'rules' => 'required|valid_email|is_unique[users.email]',
+            'errors' => [
+                'required' => 'Email harus diisi.',
+                'valid_email' => 'Email tidak valid.',
+                'is_unique' => 'Email sudah digunakan.',
+            ],
+        ],
+        'username' => [
+            'rules' => 'required|is_unique[users.username]',
+            'errors' => [
+                'required' => 'Username harus diisi.',
+                'is_unique' => 'Username sudah digunakan.',
+            ],
+        ],
+        'password' => [
+            'rules' => 'required|min_length[6]',
+            'errors' => [
+                'required' => 'Password harus diisi.',
+                'min_length' => 'Password harus memiliki panjang setidaknya 6 karakter.',
+            ],
+        ],
+        'confirm_password' => [
+            'rules' => 'required|matches[password]',
+            'errors' => [
+                'required' => 'Konfirmasi password harus diisi.',
+                'matches' => 'Konfirmasi password tidak cocok dengan password.',
+            ],
+        ],
+    ];
+
+    if ($this->validate($rules)) {
+        $userModel = new UserModel();
+
+        $userData = [
+            'username' => $this->request->getVar('username'),
+            'email' => $this->request->getVar('email'),
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
+        ];
+        $userModel->save($userData);
+
+        // Set flash data untuk "old input"
+        session()->setFlashdata('oldInput', $this->request->getPost());
+
+        return redirect()->to('/sign-in')->with('success', 'Pendaftaran berhasil. Silakan login.');
+    } else {
+        $data['validation'] = $this->validator;
+        return view('Main/signup', $data);
+    }
+}
+
 
     public function home()
     {
