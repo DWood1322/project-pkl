@@ -226,27 +226,27 @@
               <a href="/home-tes" class="nav-link active">
 
                 <p>
-                  Untitle
-                  <i class="right fas fa-angle-left"></i>
+                  New Space
+                  <i class="right fas fa-plus"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="<?= site_url('/home/page') ?>" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Untitle</p>
+                    <i class="far fa-solid fa-file nav-icon"></i>
+                    <p>Example Document</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href=" <?= site_url('/home/page') ?>" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Untitle</p>
+                    <i class="far fa-solid fa-file fa-circle nav-icon"></i>
+                    <p>Example Document</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href=" <?= site_url('/home/page') ?>" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Untitle</p>
+                    <i class="far fa-solid fa-file fa-circle nav-icon"></i>
+                    <p>Example Document</p>
                   </a>
                 </li>
               </ul>
