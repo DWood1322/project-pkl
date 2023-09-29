@@ -26,10 +26,6 @@ class Dashboard extends BaseController
         return view('Main/docs');
     }
 
-    // public function about()
-    // {
-    //     return view('Main/about');
-    // }
     // $this->session->set($datasession);
     // $key = getenv("JWT_SECRET");
     // $iat =time();
