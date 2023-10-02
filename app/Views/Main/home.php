@@ -179,7 +179,7 @@
           <div class="col">
 
             <a  data-toggle="dropdown" href="#">
-              <i class="fa-solid fa-square-plus fa-2xl" style="font-size: 50px; padding-right: 10px; padding-left: 10px;"></i>
+              <i class="fa-solid fa-square-plus fa-2xl"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
               <a href="" class="dropdown-item">
