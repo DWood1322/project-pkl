@@ -23,7 +23,7 @@ class Dashboard extends BaseController
 
     public function docs()
     {
-        return view('Main/docs');
+        return view('Main/index');
     }
 
     // $this->session->set($datasession);
@@ -172,6 +172,6 @@ class Dashboard extends BaseController
 
     public function page()
     {
-        return view('Main/page');
+        return view('Main/index');
     }
 }

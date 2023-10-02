@@ -297,7 +297,7 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div class="content-wrapper ">
       <center>
         <h1>Work In Progress </h1>
       </center>
