@@ -62,118 +62,24 @@
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="index3.html" class="nav-link">Home</a>
+          <a href="index3.html" class="nav-link"><?= $_SESSION['sesusername']; ?></a>
         </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">Contact</a>
-        </li>
+
       </ul>
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
-        <!-- Navbar Search -->
-        <li class="nav-item">
-          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-            <i class="fas fa-search"></i>
-          </a>
-          <div class="navbar-search-block">
-            <form class="form-inline">
-              <div class="input-group input-group-sm">
-                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                  <button class="btn btn-navbar" type="submit">
-                    <i class="fas fa-search"></i>
-                  </button>
-                  <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </li>
+  <!-- Navbar Search -->
+  <li class="nav-item d-none d-sm-inline-block">
+    <a href="index3.html" class="nav-link btn border-settings">
+      <i class="fas fa-gear fa-lg"></i> SETTINGS
+    </a>
+  </li>
+</ul>
 
-        <!-- Messages Dropdown Menu -->
-        <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#">
-            <i class="far fa-comments"></i>
-            <span class="badge badge-danger navbar-badge">3</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <a href="#" class="dropdown-item">
-              <!-- Message Start -->
-              <div class="media">
-                <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-                <div class="media-body">
-                  <h3 class="dropdown-item-title">
-                    Brad Diesel
-                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                  </h3>
-                  <p class="text-sm">Call me whenever you can...</p>
-                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-                </div>
-              </div>
-              <!-- Message End -->
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <!-- Message Start -->
-              <div class="media">
-                <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                <div class="media-body">
-                  <h3 class="dropdown-item-title">
-                    John Pierce
-                    <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                  </h3>
-                  <p class="text-sm">I got your message bro</p>
-                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-                </div>
-              </div>
-            </a>
-            <!-- Message End -->
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <!-- Message Start -->
-              <div class="media">
-                <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                <div class="media-body">
-                  <h3 class="dropdown-item-title">
-                    Nora Silvester
-                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                  </h3>
-                  <p class="text-sm">The subject goes here</p>
-                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-                </div>
-              </div>
-              <!-- Message End -->
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-          </div>
-        </li>
-        <!-- Notifications Dropdown Menu -->
-        <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#">
-            <i class="fas fa-gear"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-item dropdown-header">Settings</span>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <i class="far fa-user px-2"></i> User settings
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <i class="far fa-user px-2"></i> General settings
-            </a>
-            <div class="dropdown-divider"></div>
-            <form method="post" action="<?= site_url('/logout') ?>" class="align-items-center px-3">
-              <button type="submit" class="btn btn-link text-dark px-2 w-100" id="logout-button">
-                <p><i class="fas fa-sign-out-alt me-2"></i> Logout</p>
-              </button>
-            </form>
-        </li>
-      </ul>
+
+       
+           
     </nav>
     <!-- /.navbar -->
 
@@ -201,15 +107,15 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="/home" class="nav-link">
+              <a href="/home" class="nav-link style="background-color: #ee9016;"">
                 <i class="fa-solid fa-user px-2" style="color: #ffffff;"></i>
-                <p class="text-white">
+                <p>
                   Welcome <?= $_SESSION['sesusername']; ?>
                   <!-- <span class="right badge badge-danger">New</span> -->
                 </p>
               </a>
             </li>
-            <li class="nav-item menu-open">
+            <li class="nav-item ">
               <a href="/home-tes" class="nav-link">
 
                 <p>
@@ -239,14 +145,14 @@
                   </li>
                 </ul>
               </ul>
-              <ul>
+              
                 <li class="nav-item">
                   <a href=" <?= site_url('/home/page') ?>" class="nav-link">
                     <i class="far fa-solid fa-file fa-circle nav-icon"></i>
-                    <p>Example Document</p>
+                    <p>Untitle</p>
                   </a>
                 </li>
-              </ul>
+              
             </li>
           </ul>
 
@@ -257,30 +163,50 @@
               <i class="far fa-bell fa-lg"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-              <a href="#" class="dropdown-item">
+  <a class="dropdown-item">
+    <span class="dropdown-item dropdown-header text-white">Massage</span>
+    <div class="dropdown-divider"></div>
+  </a> <!-- Close the first dropdown item anchor tag -->
+
+  <!-- Add text-white class to change the text color to white -->
+  <div class="dropdown-item text-white" style="padding-left: 20px;"></div>
+  <div class="dropdown-item text-white" style="padding-left: 20px;"></div>
+  <div class="dropdown-item text-white" style="padding-left: 20px;"></div>
+</div>
+
+
+          </div>
+          <div class="col">
+
+            <a  data-toggle="dropdown" href="#">
+              <i class="fa-solid fa-square-plus fa-2xl" style="font-size: 50px; padding-right: 10px; padding-left: 10px;"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <a href="" class="dropdown-item">
+              <i class="far fa-solid fa-file fa-circle nav-icon"></i>
+                NEW SPACE
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
+                <a href="" class="dropdown-item">
+                <i class="far fa-solid fa-file fa-circle nav-icon"></i>
+                  NEW COLLECTION
                   <div class="dropdown-divider"></div>
                 </a>
             </div>
           </div>
           <div class="col">
-            <a href="">
-              <i class="fa-solid fa-square-plus fa-2xl"></i>
-            </a>
-          </div>
-          <div class="col">
-            <a data-toggle="dropdown" href="#">
+            <a data-toggle="dropdown" href="">
               <i class="fas fa-gear fa-lg"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
               <span class="dropdown-item dropdown-header">Settings</span>
               <div class="dropdown-divider"></div>
-              <a href="/home" class="dropdown-item">
+
+              <a href="" class="dropdown-item">
                 <i class="far fa-user px-2"></i> User settings
               </a>
               <div class="dropdown-divider"></div>
-              <a href="/home" class="dropdown-item">
+              <a href="" class="dropdown-item">
+
                 <i class="far fa-user px-2"></i> General settings
               </a>
               <div class="dropdown-divider"></div>
@@ -297,10 +223,11 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <div class="title">
-        <h1>Work In Progress</h1>
-      </div>
+
+    <div class="content-wrapper ">
+      <center>
+        <h1 class="text-white">Work In Progress </h1>
+      </center>
     </div>
     <!-- ./wrapper -->
 
