@@ -13,9 +13,9 @@
   <title>Sign-In</title>
 </head>
 
-<body>
+<body style="background-color: #eee;">
   <!-- LOGIN -->
-  <section style="background-color: #eee;">
+  <section class="vh-100">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-md-2 col-lg-1">
@@ -44,8 +44,8 @@
                         <?= form_open('form') ?>
                         <div class="form-outline flex-fill mb-0 align-items-center">
                           <div class="form-floating mb-2">
-                          <input type="text" class="form-control"  name="username" value="<?= set_value('username') ?>">
-                            <label >Username</label>
+                            <input type="text" class="form-control" name="username" value="<?= set_value('username') ?>">
+                            <label>Username</label>
                           </div>
                         </div>
                       </div>
@@ -54,8 +54,8 @@
 
                         <div class="form-outline flex-fill mb-0 align-items-center">
                           <div class="form-floating mb-2">
-                            <input type="password" class="form-control"  name="password">
-                            <label >Password</label>
+                            <input type="password" class="form-control" name="password">
+                            <label>Password</label>
                           </div>
                         </div>
                       </div>
