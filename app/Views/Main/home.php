@@ -266,7 +266,7 @@
           </div>
           <div class="col">
             <a href="">
-              <i class="fa-solid fa-square-plus fa-2xl" style="font-size: 50px; padding-right: 10px; padding-left: 10px;"></i>
+              <i class="fa-solid fa-square-plus fa-2xl"></i>
             </a>
           </div>
           <div class="col">
@@ -276,11 +276,11 @@
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
               <span class="dropdown-item dropdown-header">Settings</span>
               <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">
+              <a href="/home" class="dropdown-item">
                 <i class="far fa-user px-2"></i> User settings
               </a>
               <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">
+              <a href="/home" class="dropdown-item">
                 <i class="far fa-user px-2"></i> General settings
               </a>
               <div class="dropdown-divider"></div>
@@ -297,11 +297,10 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper ">
-      <center>
-        <h1>Work In Progress </h1>
-      </center>
-
+    <div class="content-wrapper">
+      <div class="title">
+        <h1>Work In Progress</h1>
+      </div>
     </div>
     <!-- ./wrapper -->
 
