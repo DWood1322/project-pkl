@@ -129,8 +129,8 @@
                   <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
                 </div>
               </div>
-              <!-- Message End -->
             </a>
+            <!-- Message End -->
             <div class="dropdown-divider"></div>
             <a href="#" class="dropdown-item">
               <!-- Message Start -->
@@ -172,19 +172,6 @@
                 <p><i class="fas fa-sign-out-alt me-2"></i> Logout</p>
               </button>
             </form>
-
-
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-            <i class="fas fa-expand-arrows-alt"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-            <i class="fas fa-th-large"></i>
-          </a>
         </li>
       </ul>
     </nav>
@@ -217,32 +204,42 @@
               <a href="/home" class="nav-link">
                 <i class="fa-solid fa-user px-2" style="color: #ffffff;"></i>
                 <p class="text-white">
-                  WELCOME <?= $_SESSION['sesusername']; ?>
+                  Welcome <?= $_SESSION['sesusername']; ?>
                   <!-- <span class="right badge badge-danger">New</span> -->
                 </p>
               </a>
             </li>
             <li class="nav-item menu-open">
-              <a href="/home-tes" class="nav-link active">
+              <a href="/home-tes" class="nav-link">
 
                 <p>
-                  New Space
-                  <i class="right fas fa-plus"></i>
+                  New Untitled Collection
+                  <i class="right fas fa-arrow-down"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="<?= site_url('/home/page') ?>" class="nav-link active">
-                    <i class="far fa-solid fa-file nav-icon"></i>
-                    <p>Example Document</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href=" <?= site_url('/home/page') ?>" class="nav-link">
-                    <i class="far fa-solid fa-file fa-circle nav-icon"></i>
-                    <p>Example Document</p>
-                  </a>
-                </li>
+                <ul>
+                  <li class="nav-item">
+                    <a href=" <?= site_url('/home/page') ?>" class="nav-link">
+                      <i class="far fa-solid fa-file fa-circle nav-icon"></i>
+                      <p>Example Document</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= site_url('/home/page') ?>" class="nav-link">
+                      <i class="far fa-solid fa-file nav-icon"></i>
+                      <p>Example Document</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href=" <?= site_url('/home/page') ?>" class="nav-link">
+                      <i class="far fa-solid fa-file fa-circle nav-icon"></i>
+                      <p>Example Document</p>
+                    </a>
+                  </li>
+                </ul>
+              </ul>
+              <ul>
                 <li class="nav-item">
                   <a href=" <?= site_url('/home/page') ?>" class="nav-link">
                     <i class="far fa-solid fa-file fa-circle nav-icon"></i>
@@ -254,20 +251,49 @@
           </ul>
 
         </nav>
-        <div class="row align-items-center">
-          <div class="col text-white">
-            Notif
+        <div class="row align-items-center bottom-nav">
+          <div class="col">
+            <a data-toggle="dropdown" href="#">
+              <i class="far fa-bell fa-lg"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <a href="#" class="dropdown-item">
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-divider"></div>
+                </a>
+            </div>
           </div>
-          <div class="col text-white">
-            Add
+          <div class="col">
+            <a href="">
+              <i class="fa-solid fa-square-plus fa-2xl" style="font-size: 50px; padding-right: 10px; padding-left: 10px;"></i>
+            </a>
           </div>
-          <div class="col text-white">
-            Settings
+          <div class="col">
+            <a data-toggle="dropdown" href="#">
+              <i class="fas fa-gear fa-lg"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <span class="dropdown-item dropdown-header">Settings</span>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="far fa-user px-2"></i> User settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="far fa-user px-2"></i> General settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <form method="post" action="<?= site_url('/logout') ?>" class="align-items-center px-3">
+                <button type="submit" class="btn btn-link text-dark px-2 w-100" id="logout-button">
+                  <p><i class="fas fa-sign-out-alt me-2"></i> Logout</p>
+                </button>
+              </form>
+            </div>
           </div>
+          <!-- /.sidebar-menu -->
         </div>
-        <!-- /.sidebar-menu -->
-      </div>
-      <!-- /.sidebar -->
+        <!-- /.sidebar -->
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
