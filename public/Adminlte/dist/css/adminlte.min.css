@@ -626,8 +626,8 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 15.5px;
-  padding-left: 15.5px;
+  padding-right: 22.5px;
+  padding-left: 22.5px;
 }
 .col {
   -ms-flex-preferred-size: 0;
@@ -9805,6 +9805,7 @@ html {
 .wrapper .content-wrapper {
   min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px));
   background-color: #1c1c1c;
+  color: white;
 }
 .layout-boxed .wrapper {
   box-shadow: 0 0 10 rgba(0, 0, 0, 0.3);
@@ -11503,7 +11504,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 [class*="sidebar-light-"] .nav-treeview > .nav-item > .nav-link.active,
 [class*="sidebar-light-"] .nav-treeview > .nav-item > .nav-link.active:hover {
   background-color: rgba(0, 0, 0, 0.1);
-  color: #212529;
+  color: #ee9016;
 }
 [class*="sidebar-light-"] .nav-treeview > .nav-item > .nav-link:hover {
   background-color: rgba(0, 0, 0, 0.1);

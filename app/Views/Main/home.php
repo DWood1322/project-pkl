@@ -177,6 +177,7 @@
 
           </div>
           <div class="col">
+
             <a  data-toggle="dropdown" href="#">
               <i class="fa-solid fa-square-plus fa-2xl" style="font-size: 50px; padding-right: 10px; padding-left: 10px;"></i>
             </a>
@@ -199,11 +200,13 @@
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
               <span class="dropdown-item dropdown-header">Settings</span>
               <div class="dropdown-divider"></div>
+
               <a href="" class="dropdown-item">
                 <i class="far fa-user px-2"></i> User settings
               </a>
               <div class="dropdown-divider"></div>
               <a href="" class="dropdown-item">
+
                 <i class="far fa-user px-2"></i> General settings
               </a>
               <div class="dropdown-divider"></div>
@@ -220,11 +223,11 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
+
     <div class="content-wrapper ">
       <center>
         <h1 class="text-white">Work In Progress </h1>
       </center>
-
     </div>
     <!-- ./wrapper -->
 
