@@ -68,7 +68,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #1c1c1c;
 }
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
@@ -9815,6 +9815,24 @@ html {
   min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px));
   background-color: #1c1c1c;
   color: white;
+  margin-top: 75px;
+  padding-left: 100px;
+  float: left;  
+  margin-right: 20px; 
+}
+.wrapper .content-wrapper span {
+  display: block; /* Untuk membuat <span> berada di bawah teks "TEAM LIBRARY" */
+  text-align: center; /* Untuk membuat teks di tengah */
+  margin-right: 80%;
+  font-size: 20px;
+}
+.wrapper .content-wrapper h1 {
+  margin-bottom: 10px; /* Untuk memberikan jarak antara teks "TEAM LIBRARY" dan elemen <span> */
+}
+.custom-divider {
+  border: none;
+  border-top: 1px solid white; /* Garis pembatas putih */
+  margin-top: 50px; /* Jarak dari elemen <span> */
 }
 .layout-boxed .wrapper {
   box-shadow: 0 0 10 rgba(0, 0, 0, 0.3);
