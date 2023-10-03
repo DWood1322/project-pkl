@@ -1,36 +1,31 @@
-Intruksi Cara Menjalankan & Menggunakan Mini-Project
+Intruksi Cara Menjalankan & Menggunakan project-pkl
+Required : 
+- PHP 8
+- Composer 2.5
 
 1. Sudah Menginstall xampp
 
-2. Masukan Folder "project" kedalam folder "\htdocs" yang berada didalam folder xampp
-   (path : D:\xampp\htdocs\project)
+2. Masukan Folder "project-pkl" kedalam folder "\htdocs" yang berada didalam folder xampp
 
-3. Jalankan Xampp Control Panel lalu pencet "Start" pada bagian "Apache" dan "MySQL" 
+3. Jalankan Xampp Control Panel lalu pencet "Start" pada bagian "Apache" dan "MySQL", kemudian ketik "localhost/phpmyadmin/"
+   pada Browser anda atau bisa juga memencet tombol "Admin" di XAMPP Control Panel pada bagian "MySQL"
 
-4. masuk ke MySQL phpmyadmin dengan cara ketik di Browser "localhost/phpmyadmin/" atau link berikut : http://localhost/phpmyadmin/index.php
+4. Lalu pada phpmyadmin buat Database baru dengan nama "ci4_jwt" (note : Perhatikan besar kecilnya huruf)
 
+5. kemudian masuk ke Database yang sudah di buat, lalu pilih Tab Import, kemudian pada bagian "File to import"
+   pilih File Database "ci4_jwt" yang berada di dalam folder "/project-pkl/cara penggunaan"
 
-5. buat terlebih dahulu database dengan nama "db_project_arlanda" sesudah itu masuk ke bagian import
+6. Masuk ke Gitbash atau Terminal lalu masuk ke dalam path "project-pkl"
+   
+7. Setelah Path sudah di "project-pkl" ketikan "php spark serve" pada Gitbash atau Terminal lalu enter
 
-6. Pilih Tab Import lalu pilih File Database yang ingin di Import
+8. Tunggu sampai Link LocalHost muncul dan buka link tersebut di Browser
 
-7. Import file Database "db_project_arlanda" yang berada di dalam folder "project" 
+9. Setelah itu di Browser akan muncul tampilan Dashboard dari ArkBook
 
-8. Masuk ke Terminal lalu masuk ke dalam path "mini-project" yang berada di dalam folder "project' dengan cara menggunakan Command "cd"
-   ("cd C:" enter
-    "cd xampp" enter
-    "cd htdocs" enter
-    "cd project" enter
-    "cd mini-project" enter)
-   Maka pathnya akan menjadi "C:\xampp\htdocs\project\mini-project"
-   Note : Jika Path Terminal berada di "C:\..." untuk keluar dari Directory tersebut menggunakan Command "cd.." lalu enter
-   (contoh kasus : "D\Users\Nama" maka jika menggunakan "cd.." lalu enter akan menjad "D:\Users" lalu lakukan kembali Command "cd.."
-   sampai tersisa "D:\" lalu langsung  ketik "C:" enter maka Path akan berubah menjadi "C:\")
+10. Dan setelah itu silakan klik tombol Registrasi/Get Started untuk membuat akun, setelah registrasi User akan di arahkan ke dalam Page Login. Masukan
+    informasi yang di butuhkan sesuai dengan saat registrasi.
 
-9. Setelah Path sudah di "mini-project" ketikan "php artisan serve" lalu enter.
+11. Setelah registrasi user akan diarahkan ke Page Home.
 
-10. Tunggu sampai Link LocalHost muncul dan buka link tersebut di Browser
-
-11. Setelah itu di Browser akan muncul tampilan Welcome dari Laravel, silahkan tambahkan "/project" pada URL di Browser tersebut
-
-12. Dan setelah itu akan tampil Hasil dari Project 
+--Selesai--
