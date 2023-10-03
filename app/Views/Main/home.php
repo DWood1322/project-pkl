@@ -69,17 +69,17 @@
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
-  <!-- Navbar Search -->
-  <li class="nav-item d-none d-sm-inline-block">
-    <a href="index3.html" class="nav-link btn border-settings">
-      <i class="fas fa-gear fa-lg"></i> SETTINGS
-    </a>
-  </li>
-</ul>
+        <!-- Navbar Search -->
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="index3.html" class="nav-link btn border-settings">
+            <i class="fas fa-gear fa-lg"></i> SETTINGS
+          </a>
+        </li>
+      </ul>
 
 
-       
-           
+
+
     </nav>
     <!-- /.navbar -->
 
@@ -107,7 +107,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="/home" class="nav-link style="background-color: #ee9016;"">
+              <a href="/home" class="nav-link">
                 <i class="fa-solid fa-user px-2" style="color: #ffffff;"></i>
                 <p>
                   <?= $_SESSION['sesusername']; ?>
@@ -145,81 +145,84 @@
                   </li>
                 </ul>
               </ul>
-              
-                <li class="nav-item">
-                  <a href=" <?= site_url('/home/page') ?>" class="nav-link">
-                    <i class="far fa-solid fa-file fa-circle nav-icon"></i>
-                    <p>Untitle</p>
-                  </a>
-                </li>
-              
+
+            <li class="nav-item">
+              <a href=" <?= site_url('/home/page') ?>" class="nav-link">
+                <i class="far fa-solid fa-file fa-circle nav-icon"></i>
+                <p>Untitle</p>
+              </a>
+            </li>
+
             </li>
           </ul>
 
-        </nav>
-        <div class="row align-items-center bottom-nav">
-          <div class="col">
-            <a data-toggle="dropdown" href="#">
-              <i class="far fa-bell fa-lg"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-  <a class="dropdown-item">
-    <span class="dropdown-item dropdown-header text-white">Massage</span>
-    <div class="dropdown-divider"></div>
-  </a> <!-- Close the first dropdown item anchor tag -->
+          <div class="row align-items-center bottom-nav">
 
-  <!-- Add text-white class to change the text color to white -->
-  <div class="dropdown-item text-white" style="padding-left: 20px;"></div>
-  <div class="dropdown-item text-white" style="padding-left: 20px;"></div>
-  <div class="dropdown-item text-white" style="padding-left: 20px;"></div>
-</div>
-
-
-          </div>
-          <div class="col">
-
-            <a  data-toggle="dropdown" href="#">
-              <i class="fa-solid fa-square-plus fa-2xl"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-              <a href="" class="dropdown-item">
-              <i class="far fa-solid fa-file fa-circle nav-icon"></i>
-                NEW SPACE
-                <div class="dropdown-divider"></div>
-                <a href="" class="dropdown-item">
-                <i class="far fa-solid fa-file fa-circle nav-icon"></i>
-                  NEW COLLECTION
+            <div class="col">
+              <a data-toggle="dropdown" href="#">
+                <i class="far fa-bell fa-lg"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <a class="dropdown-item">
+                  <span>Massage</span>
                   <div class="dropdown-divider"></div>
+                </a> <!-- Close the first dropdown item anchor tag -->
+
+                <!-- Add text-white class to change the text color to white -->
+                <div class="dropdown-item text-white" style="padding-left: 20px;"></div>
+                <div class="dropdown-item text-white" style="padding-left: 20px;"></div>
+                <div class="dropdown-item text-white" style="padding-left: 20px;"></div>
+              </div>
+            </div>
+
+            <div class="col">
+              <a data-toggle="dropdown" href="#">
+                <i class="fa-solid fa-square-plus fa-2xl"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <a href="/home" class="dropdown-item">
+                  <i class="far fa-solid fa-file fa-circle nav-icon"></i>
+                  <span>NEW SPACE</span>
                 </a>
+                <div class="dropdown-divider"></div>
+                <a href="/home" class="dropdown-item">
+                  <i class="far fa-solid fa-file fa-circle nav-icon"></i>
+                  <span>NEW COLLECTION</span>
+                </a>
+                <div class="dropdown-divider"></div>
+              </div>
+            </div>
+
+            <div class="col" style="position: relative;">
+              <a data-toggle="dropdown" href="">
+                <i class="fas fa-gear fa-lg"></i>
+              </a>
+              <div class="dropdown-menu  dropdown-menu-lg dropdown-menu-right">
+                <span class="dropdown-header">Settings</span>
+                <div class="dropdown-divider"></div>
+
+                <a href="/home/page" class="dropdown-item">
+                  <i class="far fa-user px-2 nav-icon"></i> 
+                  <span>User settings</span>
+                </a>
+                <div class="dropdown-divider"></div>
+
+                <a href="/home/page" class="dropdown-item">
+                  <i class="far fa-user px-2 nav-icon"></i>
+                  <span>General settings</span>
+                </a>
+                <div class="dropdown-divider"></div>
+
+                <form method="post" action="<?= site_url('/logout') ?>" class="align-items-center px-3">
+                  <button type="submit" class="btn btn-link text-dark px-2 w-100" id="logout-button">
+                    <p><i class="fas fa-sign-out-alt me-2"></i>Logout</p>
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-          <div class="col">
-            <a data-toggle="dropdown" href="">
-              <i class="fas fa-gear fa-lg"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-              <span class="dropdown-item dropdown-header">Settings</span>
-              <div class="dropdown-divider"></div>
-
-              <a href="" class="dropdown-item">
-                <i class="far fa-user px-2"></i> User settings
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="" class="dropdown-item">
-
-                <i class="far fa-user px-2"></i> General settings
-              </a>
-              <div class="dropdown-divider"></div>
-              <form method="post" action="<?= site_url('/logout') ?>" class="align-items-center px-3">
-                <button type="submit" class="btn btn-link text-dark px-2 w-100" id="logout-button">
-                  <p><i class="fas fa-sign-out-alt me-2"></i> Logout</p>
-                </button>
-              </form>
-            </div>
-          </div>
-          <!-- /.sidebar-menu -->
-        </div>
-        <!-- /.sidebar -->
+        </nav>
+      </div>
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
