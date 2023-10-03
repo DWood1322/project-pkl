@@ -539,12 +539,6 @@ pre code {
   bottom: 4%;
   position: absolute;
 }
-.bottom-nav i {
-  color: #ee9016;
-}
-.bottom-nav i:hover {
-  color: #848484;
-}
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -3091,7 +3085,7 @@ input[type="submit"].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  color: #1c1c1c;
   text-align: left;
   list-style: none;
   background-color: #1c1c1c;
@@ -3239,11 +3233,11 @@ input[type="submit"].btn-block {
   width: 100%;
   padding: 0.25rem 1rem;
   clear: both;
-  font-weight: 400;
   color: #212529;
   text-align: inherit;
   white-space: nowrap;
-  background-color: transparent;
+  background-color: #2F2F2F;
+  font-weight: bold;
   border: 0;
 }
 .dropdown-item:focus,
@@ -3251,6 +3245,21 @@ input[type="submit"].btn-block {
   color: #1c1c1c;
   text-decoration: none;
   background-color: #ee9016;
+  transition: 0.5s;
+}
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:hover .nav-icon,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:hover span,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:hover .dropdown-divider{
+  color: #1c1c1c;
+  font-weight: bold;
+  transition: 0.5s;
+  border-color: #1c1c1c;
+}
+.dropdown-iten:hover i {
+  color: white;
 }
 .dropdown-item.active,
 .dropdown-item:active {
