@@ -7,7 +7,7 @@ Required :
 
 2. Masukan Folder "project-pkl" kedalam folder "\htdocs" yang berada didalam folder xampp
 
-3. Jalankan Xampp Control Panel lalu pencet "Start" pada bagian "Apache" dan "MySQL", kemudian ketik "localhost/phpmyadmin/"
+3. Jalankan Xampp    Control Panel lalu pencet "Start" pada bagian "Apache" dan "MySQL", kemudian ketik "localhost/phpmyadmin/"
    pada Browser anda atau bisa juga memencet tombol "Admin" di XAMPP Control Panel pada bagian "MySQL"
 
 4. Lalu pada phpmyadmin buat Database baru dengan nama "ci4_jwt" (note : Perhatikan besar kecilnya huruf)
