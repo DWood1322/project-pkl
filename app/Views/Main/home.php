@@ -110,7 +110,7 @@
               <a href="/home" class="nav-link style="background-color: #ee9016;"">
                 <i class="fa-solid fa-user px-2" style="color: #ffffff;"></i>
                 <p>
-                  Welcome <?= $_SESSION['sesusername']; ?>
+                  <?= $_SESSION['sesusername']; ?>
                   <!-- <span class="right badge badge-danger">New</span> -->
                 </p>
               </a>
@@ -224,11 +224,13 @@
 
     <!-- Content Wrapper. Contains page content -->
 
-    <div class="content-wrapper ">
-      <center>
-        <h1 class="text-white">Work In Progress </h1>
-      </center>
-    </div>
+    <div class="content-wrapper w-75">
+    <h1><i class="fa-solid fa-user fa-xl"></i> TEAM LIBRARY</h1>
+    <span><?= $_SESSION['sesusername']; ?></span>
+    <hr class="custom-divider">
+</div>
+
+   
     <!-- ./wrapper -->
 
     <!-- jQuery -->
